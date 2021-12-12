@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ITKRegistrationHelper">
+      <UniqueIdentifier>{ef7d9472-7d46-4821-b82d-f76cad0e80f9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -24,6 +27,36 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="ITKRegistrationHelper\itkAffineImageToImageRegistrationMethod.h">
+      <Filter>ITKRegistrationHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="ITKRegistrationHelper\itkAnisotropicSimilarity3DTransform.h">
+      <Filter>ITKRegistrationHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="ITKRegistrationHelper\itkAnisotropicSimilarityLandmarkBasedTransformInitializer.h">
+      <Filter>ITKRegistrationHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="ITKRegistrationHelper\itkBSplineImageToImageRegistrationMethod.h">
+      <Filter>ITKRegistrationHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="ITKRegistrationHelper\itkImageRegionMomentsCalculator.h">
+      <Filter>ITKRegistrationHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="ITKRegistrationHelper\itkImageToImageRegistrationHelper.h">
+      <Filter>ITKRegistrationHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="ITKRegistrationHelper\itkImageToImageRegistrationMethod.h">
+      <Filter>ITKRegistrationHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="ITKRegistrationHelper\itkInitialImageToImageRegistrationMethod.h">
+      <Filter>ITKRegistrationHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="ITKRegistrationHelper\itkOptimizedImageToImageRegistrationMethod.h">
+      <Filter>ITKRegistrationHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="ITKRegistrationHelper\itkRigidImageToImageRegistrationMethod.h">
+      <Filter>ITKRegistrationHelper</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -32,5 +65,37 @@
     <ClCompile Include="WandMedRegistration.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ITKRegistrationHelper\itkAffineImageToImageRegistrationMethod.txx">
+      <Filter>ITKRegistrationHelper</Filter>
+    </None>
+    <None Include="ITKRegistrationHelper\itkAnisotropicSimilarity3DTransform.txx">
+      <Filter>ITKRegistrationHelper</Filter>
+    </None>
+    <None Include="ITKRegistrationHelper\itkAnisotropicSimilarityLandmarkBasedTransformInitializer.txx">
+      <Filter>ITKRegistrationHelper</Filter>
+    </None>
+    <None Include="ITKRegistrationHelper\itkBSplineImageToImageRegistrationMethod.txx">
+      <Filter>ITKRegistrationHelper</Filter>
+    </None>
+    <None Include="ITKRegistrationHelper\itkImageRegionMomentsCalculator.txx">
+      <Filter>ITKRegistrationHelper</Filter>
+    </None>
+    <None Include="ITKRegistrationHelper\itkImageToImageRegistrationHelper.txx">
+      <Filter>ITKRegistrationHelper</Filter>
+    </None>
+    <None Include="ITKRegistrationHelper\itkImageToImageRegistrationMethod.txx">
+      <Filter>ITKRegistrationHelper</Filter>
+    </None>
+    <None Include="ITKRegistrationHelper\itkInitialImageToImageRegistrationMethod.txx">
+      <Filter>ITKRegistrationHelper</Filter>
+    </None>
+    <None Include="ITKRegistrationHelper\itkOptimizedImageToImageRegistrationMethod.txx">
+      <Filter>ITKRegistrationHelper</Filter>
+    </None>
+    <None Include="ITKRegistrationHelper\itkRigidImageToImageRegistrationMethod.txx">
+      <Filter>ITKRegistrationHelper</Filter>
+    </None>
   </ItemGroup>
 </Project>

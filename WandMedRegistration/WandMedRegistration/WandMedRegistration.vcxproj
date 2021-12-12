@@ -21,7 +21,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -55,10 +55,13 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../../WandMedEnvc/include/ITK-4.13;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../../WandMedEnvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ITKBiasCorrection-4.13.lib;ITKBioCell-4.13.lib;ITKCommon-4.13.lib;ITKDICOMParser-4.13.lib;itkdouble-conversion-4.13.lib;ITKEXPAT-4.13.lib;ITKFEM-4.13.lib;itkgdcmcharls-4.13.lib;itkgdcmCommon-4.13.lib;itkgdcmDICT-4.13.lib;itkgdcmDSED-4.13.lib;itkgdcmIOD-4.13.lib;itkgdcmjpeg12-4.13.lib;itkgdcmjpeg16-4.13.lib;itkgdcmjpeg8-4.13.lib;itkgdcmMEXD-4.13.lib;itkgdcmMSFF-4.13.lib;itkgdcmopenjp2-4.13.lib;itkgdcmsocketxx-4.13.lib;ITKgiftiio-4.13.lib;ITKIOBioRad-4.13.lib;ITKIOBMP-4.13.lib;ITKIOBruker-4.13.lib;ITKIOCSV-4.13.lib;ITKIOGDCM-4.13.lib;ITKIOGE-4.13.lib;ITKIOGIPL-4.13.lib;ITKIOHDF5-4.13.lib;ITKIOImageBase-4.13.lib;ITKIOIPL-4.13.lib;ITKIOJPEG-4.13.lib;ITKIOLSM-4.13.lib;ITKIOMesh-4.13.lib;ITKIOMeta-4.13.lib;ITKIOMINC-4.13.lib;ITKIOMRC-4.13.lib;ITKIONIFTI-4.13.lib;ITKIONRRD-4.13.lib;ITKIOPNG-4.13.lib;ITKIOSiemens-4.13.lib;ITKIOSpatialObjects-4.13.lib;ITKIOStimulate-4.13.lib;ITKIOTIFF-4.13.lib;ITKIOTransformBase-4.13.lib;ITKIOTransformHDF5-4.13.lib;ITKIOTransformInsightLegacy-4.13.lib;ITKIOTransformMatlab-4.13.lib;ITKIOVTK-4.13.lib;ITKIOXML-4.13.lib;itkjpeg-4.13.lib;ITKKLMRegionGrowing-4.13.lib;ITKLabelMap-4.13.lib;itklbfgs-4.13.lib;ITKMesh-4.13.lib;ITKMetaIO-4.13.lib;itkminc2-4.13.lib;itknetlib-4.13.lib;itkNetlibSlatec-4.13.lib;ITKniftiio-4.13.lib;ITKNrrdIO-4.13.lib;ITKOptimizers-4.13.lib;ITKOptimizersv4-4.13.lib;ITKPath-4.13.lib;itkpng-4.13.lib;ITKPolynomials-4.13.lib;ITKQuadEdgeMesh-4.13.lib;ITKSpatialObjects-4.13.lib;ITKStatistics-4.13.lib;itksys-4.13.lib;itktestlib-4.13.lib;itktiff-4.13.lib;ITKTransform-4.13.lib;ITKTransformFactory-4.13.lib;itkv3p_netlib-4.13.lib;itkvcl-4.13.lib;ITKVideoCore-4.13.lib;ITKVideoIO-4.13.lib;itkvnl-4.13.lib;ITKVNLInstantiation-4.13.lib;itkvnl_algo-4.13.lib;ITKVTK-4.13.lib;ITKWatersheds-4.13.lib;itkzlib-4.13.lib;ITKznz-4.13.lib;libitkhdf5.lib;libitkhdf5_cpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -70,18 +73,31 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../../WandMedEnvc/include/ITK-4.13;./ITKRegistrationHelper;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ITKBiasCorrection-4.13.lib;ITKBioCell-4.13.lib;ITKCommon-4.13.lib;ITKDICOMParser-4.13.lib;itkdouble-conversion-4.13.lib;ITKEXPAT-4.13.lib;ITKFEM-4.13.lib;itkgdcmcharls-4.13.lib;itkgdcmCommon-4.13.lib;itkgdcmDICT-4.13.lib;itkgdcmDSED-4.13.lib;itkgdcmIOD-4.13.lib;itkgdcmjpeg12-4.13.lib;itkgdcmjpeg16-4.13.lib;itkgdcmjpeg8-4.13.lib;itkgdcmMEXD-4.13.lib;itkgdcmMSFF-4.13.lib;itkgdcmopenjp2-4.13.lib;itkgdcmsocketxx-4.13.lib;ITKgiftiio-4.13.lib;ITKIOBioRad-4.13.lib;ITKIOBMP-4.13.lib;ITKIOBruker-4.13.lib;ITKIOCSV-4.13.lib;ITKIOGDCM-4.13.lib;ITKIOGE-4.13.lib;ITKIOGIPL-4.13.lib;ITKIOHDF5-4.13.lib;ITKIOImageBase-4.13.lib;ITKIOIPL-4.13.lib;ITKIOJPEG-4.13.lib;ITKIOLSM-4.13.lib;ITKIOMesh-4.13.lib;ITKIOMeta-4.13.lib;ITKIOMINC-4.13.lib;ITKIOMRC-4.13.lib;ITKIONIFTI-4.13.lib;ITKIONRRD-4.13.lib;ITKIOPNG-4.13.lib;ITKIOSiemens-4.13.lib;ITKIOSpatialObjects-4.13.lib;ITKIOStimulate-4.13.lib;ITKIOTIFF-4.13.lib;ITKIOTransformBase-4.13.lib;ITKIOTransformHDF5-4.13.lib;ITKIOTransformInsightLegacy-4.13.lib;ITKIOTransformMatlab-4.13.lib;ITKIOVTK-4.13.lib;ITKIOXML-4.13.lib;itkjpeg-4.13.lib;ITKKLMRegionGrowing-4.13.lib;ITKLabelMap-4.13.lib;itklbfgs-4.13.lib;ITKMesh-4.13.lib;ITKMetaIO-4.13.lib;itkminc2-4.13.lib;itknetlib-4.13.lib;itkNetlibSlatec-4.13.lib;ITKniftiio-4.13.lib;ITKNrrdIO-4.13.lib;ITKOptimizers-4.13.lib;ITKOptimizersv4-4.13.lib;ITKPath-4.13.lib;itkpng-4.13.lib;ITKPolynomials-4.13.lib;ITKQuadEdgeMesh-4.13.lib;ITKSpatialObjects-4.13.lib;ITKStatistics-4.13.lib;itksys-4.13.lib;itktestlib-4.13.lib;itktiff-4.13.lib;ITKTransform-4.13.lib;ITKTransformFactory-4.13.lib;itkv3p_netlib-4.13.lib;itkvcl-4.13.lib;ITKVideoCore-4.13.lib;ITKVideoIO-4.13.lib;itkvnl-4.13.lib;ITKVNLInstantiation-4.13.lib;itkvnl_algo-4.13.lib;ITKVTK-4.13.lib;ITKWatersheds-4.13.lib;itkzlib-4.13.lib;ITKznz-4.13.lib;libitkhdf5.lib;libitkhdf5_cpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../WandMedEnvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ITKRegistrationHelper\itkAffineImageToImageRegistrationMethod.h" />
+    <ClInclude Include="ITKRegistrationHelper\itkAnisotropicSimilarity3DTransform.h" />
+    <ClInclude Include="ITKRegistrationHelper\itkAnisotropicSimilarityLandmarkBasedTransformInitializer.h" />
+    <ClInclude Include="ITKRegistrationHelper\itkBSplineImageToImageRegistrationMethod.h" />
+    <ClInclude Include="ITKRegistrationHelper\itkImageRegionMomentsCalculator.h" />
+    <ClInclude Include="ITKRegistrationHelper\itkImageToImageRegistrationHelper.h" />
+    <ClInclude Include="ITKRegistrationHelper\itkImageToImageRegistrationMethod.h" />
+    <ClInclude Include="ITKRegistrationHelper\itkInitialImageToImageRegistrationMethod.h" />
+    <ClInclude Include="ITKRegistrationHelper\itkOptimizedImageToImageRegistrationMethod.h" />
+    <ClInclude Include="ITKRegistrationHelper\itkRigidImageToImageRegistrationMethod.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -91,6 +107,18 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="WandMedRegistration.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ITKRegistrationHelper\itkAffineImageToImageRegistrationMethod.txx" />
+    <None Include="ITKRegistrationHelper\itkAnisotropicSimilarity3DTransform.txx" />
+    <None Include="ITKRegistrationHelper\itkAnisotropicSimilarityLandmarkBasedTransformInitializer.txx" />
+    <None Include="ITKRegistrationHelper\itkBSplineImageToImageRegistrationMethod.txx" />
+    <None Include="ITKRegistrationHelper\itkImageRegionMomentsCalculator.txx" />
+    <None Include="ITKRegistrationHelper\itkImageToImageRegistrationHelper.txx" />
+    <None Include="ITKRegistrationHelper\itkImageToImageRegistrationMethod.txx" />
+    <None Include="ITKRegistrationHelper\itkInitialImageToImageRegistrationMethod.txx" />
+    <None Include="ITKRegistrationHelper\itkOptimizedImageToImageRegistrationMethod.txx" />
+    <None Include="ITKRegistrationHelper\itkRigidImageToImageRegistrationMethod.txx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
