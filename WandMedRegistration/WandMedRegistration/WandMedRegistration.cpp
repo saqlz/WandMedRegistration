@@ -5,8 +5,12 @@
 #include <string>
 #include "itkObjectFactoryBase.h"
 #include "itkNrrdImageIOFactory.h"
+#include "itkTransformIOFactory.h"
+#include "itkTxtTransformIOFactory.h"
+#include "itkTransformFactory.h"
 #include "itkImageFileReader.h"
 #include "itkImageFileWriter.h"
+#include "itkTransformFileWriter.h"
 #include "itkImageToImageRegistrationHelper.h"
 
 // Use an anonymous namespace to keep class types and function names
@@ -24,7 +28,7 @@ namespace
 		itk::ImageIOBase::IOComponentType & componentType,
 		unsigned int & dimensions)
 	{
-		itk::ObjectFactoryBase::RegisterFactory(itk::NrrdImageIOFactory::New());
+		
 		typedef itk::Image<short, 3> ImageType;
 		itk::ImageFileReader<ImageType>::Pointer imageReader =
 			itk::ImageFileReader<ImageType>::New();
@@ -39,7 +43,6 @@ namespace
 	template <unsigned int DimensionT, class T>
 	int DoIt(int argc, char *argv[])
 	{
-
 		std::string verbosityLevel = "Standard";
 		enum VerboseLevelEnum { SILENT, STANDARD, VERBOSE };
 		VerboseLevelEnum verbosity = SILENT;
@@ -621,7 +624,7 @@ namespace
 				return EXIT_FAILURE;
 			}
 		}
-
+		itk::ObjectFactoryBase::RegisterFactory(itk::TxtTransformIOFactory::New());
 		std::string saveTransform = "D:\\test.txt";
 		if (saveTransform.size() > 1)
 		{
@@ -739,6 +742,8 @@ int main(int argc, char * argv[])
 		itk::MultiThreader::SetGlobalDefaultNumberOfThreads(numberOfThreads);
 	}
 
+
+	itk::ObjectFactoryBase::RegisterFactory(itk::NrrdImageIOFactory::New());
 	unsigned int                      fixedDimensions = 0;
 	itk::ImageIOBase::IOPixelType     fixedPixelType;
 	itk::ImageIOBase::IOComponentType fixedComponentType;
